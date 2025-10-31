@@ -14,9 +14,8 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* Changed to space-between to accommodate hamburger */
+  justify-content: flex-end;
   align-items: center;
-  position: relative; /* Added for positioning the mobile menu */
 }
 
 .navigation ul {
@@ -72,93 +71,69 @@
   width: 100%;
 }
 
-/* Mobile menu button */
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  z-index: 1001; /* Ensure it's above the menu */
+/* Responsive styles - keeping navigation bar visible */
+@media (max-width: 1024px) {
+  .navigation {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .navigation ul {
+    gap: 1.8rem;
+  }
+  
+  .navigation a {
+    font-size: 0.85rem;
+  }
 }
 
-.hamburger-line {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  border-radius: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
   .navigation {
-    padding: 1rem 1.5rem;
+    padding: 0.6rem 1rem;
   }
-
-  .navigation nav {
-    justify-content: space-between; /* Ensure hamburger is on the left, menu on the right */
-  }
-
-  .mobile-menu-btn {
-    display: flex;
-  }
-
+  
   .navigation ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #faf6f1; /* Match the nav background */
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    gap: 0;
-    
-    /* Hide menu by default */
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
   }
-
-  /* Show menu when .nav-open class is added */
-  .navigation.nav-open ul {
-    max-height: 300px;
-    padding: 1rem 0;
+  
+  .navigation a {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
   }
-
-  .navigation li {
-    width: 100%;
-    text-align: center;
-    padding: 0.75rem 0;
-  }
-
-  .navigation li:hover {
-    background-color: rgba(24, 167, 250, 0.1);
-  }
-
-  /* Animate hamburger to 'X' on open */
-  .navigation.nav-open .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 6px);
-  }
-
-  .navigation.nav-open .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navigation.nav-open .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(8px, -6px);
+  
+  /* Reduce underline animation on mobile */
+  .navigation a::after {
+    bottom: -3px;
+    height: 1.5px;
   }
 }
 
 @media (max-width: 480px) {
   .navigation {
-    padding: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .navigation ul {
+    gap: 0.8rem;
+  }
+  
+  .navigation a {
+    font-size: 0.75rem;
+    letter-spacing: 0.2px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .navigation {
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .navigation ul {
+    gap: 0.6rem;
+  }
+  
+  .navigation a {
+    font-size: 0.7rem;
+    letter-spacing: 0.1px;
   }
 }
