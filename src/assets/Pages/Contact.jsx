@@ -30,9 +30,12 @@ const Contact = () => {
     setFormStatus({ submitted: false, loading: true, error: null });
     
     // Replace these with your actual EmailJS credentials
-    const serviceId = 'service_4ieqpsj';
-    const templateId = 'template_pkc0z0c';
-    const publicKey = 'j4az59NfhbIsYchav';
+    // const serviceId = 'service_4ieqpsj';
+    // const templateId = 'template_pkc0z0c';
+    // const publicKey = 'j4az59NfhbIsYchav';
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
     
     emailjs.send(serviceId, templateId, formData, publicKey)
       .then((response) => {
