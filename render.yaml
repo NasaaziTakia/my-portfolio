@@ -1,12 +1,9 @@
 services:
-  # This configuration is for a STATIC SITE (like a standard React app)
   - type: web
-    name: my-portfolio1  # <-- CHANGE THIS to your Render service name
+    name: my-portfolio
     env: static
     buildCommand: npm run build
-    staticPublishPath: dist
-    
-    # --- THIS IS THE MAGIC PART THAT FIXES REFRESHES ---
+    staticPublishPath: dist  # <-- THIS LINE IS NOW CORRECT FOR VITE
     routes:
       - route: /(.*) 
         handler: spa
