@@ -1,0 +1,164 @@
+.project-detail-page {
+  width: 100%;
+  min-height: 100vh;
+  background:#faf6f1; /* Changed from pink gradient to beige to match your site */
+  padding: 8rem 4rem 4rem 4rem;
+}
+
+.project-header {
+  margin-bottom: 3rem;
+}
+
+.project-header h1 {
+  font-size: 2.5rem;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.project-header p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.btn-view-designs {
+  background-color: #18A7FA; /* Changed to your blue accent color */
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 4px; /* Reduced from 8px for less rounded corners */
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-view-designs:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 167, 250, 0.3); /* Blue shadow on hover */
+}
+
+.project-section {
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.9); /* Increased opacity for better contrast */
+  padding: 2rem;
+  border-radius: 8px; /* Reduced from 15px for less rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Added shadow for depth */
+}
+
+.project-section h2 {
+  font-size: 2rem;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.project-section p {
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.design-process {
+  margin-top: 3rem;
+}
+
+.design-process h2 {
+  font-size: 2rem;
+  color: #2d2d2d;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.process-subtitle {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.process-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px; /* Reduced from 12px for less rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Updated shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+.process-image-placeholder {
+  width: 100%;
+  height: 200px;
+  background: #f0e0e0; /* Changed from gradient to solid color */
+  border-radius: 4px; /* Reduced from 8px */
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.process-card h3 {
+  font-size: 1.3rem;
+  color: #2d2d2d;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.process-card p {
+  color: #4a4a4a;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .project-detail-page {
+    padding: 6rem 3rem 3rem 3rem;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-detail-page {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  .project-header h1 {
+    font-size: 2rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-section {
+    padding: 1.5rem;
+  }
+
+  .process-card {
+    padding: 1.2rem;
+  }
+}
