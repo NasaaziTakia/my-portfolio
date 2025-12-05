@@ -14,7 +14,7 @@ body {
 .container {
   width: 100%;
   min-height: 100vh;
-  background-color: #faf6f1; /* Light beige background matching the image */
+  background-color: #ffffff; /* Light beige background matching the image */
   padding: 0;
   overflow-x: hidden;
 }

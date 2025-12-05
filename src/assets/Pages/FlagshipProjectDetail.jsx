@@ -1,30 +1,15 @@
-import { useParams } from 'react-router-dom';
 import "../CSS/ProjectDetails.css";
 import Navigation from '../Components/Navigation';
 
-function ProjectDetail() {
-  const { id } = useParams();
-
-  const projectData = {
-    'hospital-management': {
-      title: 'Hospital Management system',
-      subtitle: 'Digitizing Care for Better Health',
-      description: 'City Care Hospital manages patients, staff, and appointments digitally, reducing errors and delays, and delivering faster, better care.',
-      purpose: 'The system helps hospitals manage patients, staff, appointments, and schedules in one organized platform. It reduces errors and delays, makes work easier for staff, and ensures patients receive faster, better, and more reliable care.',
-      problemSolved: 'Many hospitals in Uganda still use paper-based records, causing lost files, long waits, and poor staff communication. This system digitizes patient records, organizes appointments and schedules, and improves staff communication, enabling faster and better healthcare services.',
-      figmaUrl: 'https://www.figma.com/design/Q6RkllXdw8wbqodNdGXlZa/Nasaazi-Takia?node-id=1347-343&t=mYoXtZR8EdqAeayN-0'
-    },
-    'stock-sales': {
-      title: 'Stock and Sales Management system',
-      subtitle: 'Streamlining Furniture Business Operations',
-      description: 'Mobile application for Mayondo Furniture Workshop to manage stock and sales efficiently.',
-      purpose: 'The system helps furniture businesses track inventory, record sales, and manage customer orders in real-time, reducing manual errors and improving operational efficiency.',
-      problemSolved: 'Manual record-keeping led to inventory discrepancies and delayed order processing. This mobile solution provides real-time tracking and simple data visualization for users with low digital literacy.',
-      figmaUrl: 'https://www.figma.com/design/YOUR_STOCK_SALES_DESIGN_URL' // Replace with your actual Figma URL
-    }
+function FlagshipProjectDetail() {
+  const project = {
+    title: 'Hospital Management system',
+    subtitle: 'Digitizing Care for Better Health',
+    description: 'City Care Hospital manages patients, staff, and appointments digitally, reducing errors and delays, and delivering faster, better care.',
+    purpose: 'The system helps hospitals manage patients, staff, appointments, and schedules in one organized platform. It reduces errors and delays, makes work easier for staff, and ensures patients receive faster, better, and more reliable care.',
+    problemSolved: 'Many hospitals in Uganda still use paper-based records, causing lost files, long waits, and poor staff communication. This system digitizes patient records, organizes appointments and schedules, and improves staff communication, enabling faster and better healthcare services.',
+    figmaUrl: 'https://www.figma.com/design/Q6RkllXdw8wbqodNdGXlZa/Nasaazi-Takia?node-id=1347-343&t=mYoXtZR8EdqAeayN-0'
   };
-
-  const project = projectData[id] || projectData['hospital-management'];
 
   const designProcess = [
     {
@@ -98,4 +83,4 @@ function ProjectDetail() {
   );
 }
 
-export default ProjectDetail;
+export default FlagshipProjectDetail;

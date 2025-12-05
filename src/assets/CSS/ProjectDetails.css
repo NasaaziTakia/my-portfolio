@@ -1,7 +1,7 @@
 .project-detail-page {
   width: 100%;
   min-height: 100vh;
-  background:#faf6f1; /* Changed from pink gradient to beige to match your site */
+  background:#ffffff; /* Changed from pink gradient to beige to match your site */
   padding: 8rem 4rem 4rem 4rem;
 }
 
@@ -160,5 +160,73 @@
 
   .process-card {
     padding: 1.2rem;
+  }
+}
+/* PDF Layout Styles */
+.pdf-layout {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.pdf-section {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.pdf-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.pdf-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.pdf-section ul {
+  padding-left: 20px;
+}
+
+.pdf-section li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.process-flow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.process-step {
+  width: 48%;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.process-step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.process-step p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .process-step {
+    width: 100%;
   }
 }

@@ -26,13 +26,15 @@ function Portfolio() {
       {/* Flagship Project */}
       <section className="flagship-section">
         <h2 className="section-title">Flagship Project</h2>
-        <div className="project-card flagship-card">
+        <div className="project-card other-card">
           <div className="project-image-placeholder">Project Image</div>
-          <h3 className="project-title">{projects[0].title}</h3>
-          <p className="project-description">{projects[0].description}</p>
-          <Link to={'/portfolio/projectDetails'}>
-            <button className="btn-details">Project Details</button>
-          </Link>
+          <div className="project-content">
+            <h3 className="project-title">{projects[0].title}</h3>
+            <p className="project-description">{projects[0].description}</p>
+            <Link to={'/portfolio/projectDetails'}>
+              <button className="btn-details">Project Details</button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -44,7 +46,7 @@ function Portfolio() {
           <div className="project-content">
             <h3 className="project-title">{projects[1].title}</h3>
             <p className="project-description">{projects[1].description}</p>
-            <Link to={`/project/${projects[1].id}`}>
+            <Link to={'/portfolio/projectDetails'}>
               <button className="btn-details">Project Details</button>
             </Link>
           </div>
