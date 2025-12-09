@@ -4,6 +4,7 @@ import Portfolio from './assets/Pages/Portfolio'
 import ProjectDetails from './assets/Pages/ProjectDetails'
 import Toolkit from './assets/Pages/Toolkit'  
 import Contact from './assets/Pages/Contact'
+import OtherProjectDetail from './assets/Pages/OtherProjectDetail'
 
 function App() {
  
@@ -17,6 +18,7 @@ function App() {
           <Route path='/portfolio/projectDetails' element={<ProjectDetails />} />
           <Route path='/mytools' element={<Toolkit/>} />
           <Route path='/contact' element={<Contact />} />
+           <Route path="/portfolio/OtherProjectDetail" element={<OtherProjectDetail />} />
         </Routes>
       </Router>
     </>

@@ -1,7 +1,7 @@
 .portfolio-page {
   width: 100%;
   min-height: 100vh;
-  background: #faf9f7; /* Changed from pink to beige to match your site */
+  background: #faf9f7;
   padding: 8rem 6rem 4rem 6rem;
   font-family: 'Poppins', sans-serif;
   display: block;
@@ -19,33 +19,53 @@
 
 /* PROJECT CARD - COMMON */
 .project-card {
-  background: rgba(255, 255, 255, 0.9); /* Increased opacity for better contrast */
-  border-radius: 8px; /* Reduced from 10px for less rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   margin-bottom: 4rem;
   width: 100%;
   backdrop-filter: blur(6px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added hover transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px); /* Added hover effect */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* FLAGSHIP PROJECT (IMAGE ON TOP) */
-.flagship-card .project-image-placeholder {
-  width: 100%;
-  height: 300px;
-  background: rgba(0, 0, 0, 0.08);
-  border-radius: 8px; /* Reduced from 10px */
-  margin-bottom: 1.5rem;
+/* ─── LAYOUT: BOTH FLAGSHIP & OTHER CARDS ─── */
+.flagship-card,
+.other-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Content area (right side) */
+.flagship-card .project-content,
+.other-card .project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  color: #666;
-  font-size: 1.2rem;
+}
+
+/* ─── FLAGSHIP CARD IMAGE (horizontal/wide images) ─── */
+.flagship-card .project-image-placeholder {
+  width: 40%;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.flagship-card .project-image-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 /* OTHER PROJECT (IMAGE ON LEFT, TEXT ON RIGHT) */
@@ -57,22 +77,17 @@
 
 .other-card .project-image-placeholder {
   width: 40%;
-  height: 200px;
+  height: 250px; /* <-- ADD THIS LINE to set a fixed, smaller height */
   background: rgba(0, 0, 0, 0.08);
-  border-radius: 8px; /* Reduced from 10px */
+  border-radius: 8px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
-  font-size: 1.2rem;
+  overflow: hidden;
 }
 
-.other-card .project-content {
-  flex: 1;
-}
-
-/* TEXT STYLING */
+/* ─── TEXT STYLING ─── */
 .project-title {
   font-size: 1.2rem;
   color: #111;
@@ -88,44 +103,52 @@
   font-size: 0.95rem;
 }
 
-/* BUTTON */
+/* ─── BUTTON ─── */
 .btn-details {
-  background-color: #18A7FA; /* Changed to your blue accent color */
+  background-color: #18A7FA;
   color: white;
   padding: 0.7rem 1.6rem;
   border: none;
-  border-radius: 4px; /* Reduced from 6px for less rounded corners */
+  border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
   display: inline-block;
   margin-top: 1rem;
   transition: all 0.3s ease;
+  align-self: flex-start;
 }
 
 .btn-details:hover {
-  background-color: #1492e0; /* Darker shade of blue for hover */
+  background-color: #1492e0;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(24, 167, 250, 0.3); /* Blue shadow on hover */
+  box-shadow: 0 4px 12px rgba(24, 167, 250, 0.3);
 }
 
-/* RESPONSIVE DESIGN */
+/* ─── RESPONSIVE DESIGN ─── */
 @media (max-width: 900px) {
   .portfolio-page {
     padding: 6rem 2rem;
   }
 
+  .flagship-card,
   .other-card {
     flex-direction: column;
   }
 
+  .flagship-card .project-image-placeholder,
   .other-card .project-image-placeholder {
     width: 100%;
-    height: 200px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .other-card .project-image-placeholder {
+    aspect-ratio: 9 / 16;
   }
 
   .btn-details {
-    float: none;
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -156,7 +179,7 @@
     padding: 1.2rem;
   }
 
-  .flagship-card .project-image-placeholder {
-    height: 250px;
+  .other-card .project-image-placeholder {
+    border-radius: 10px;
   }
 }

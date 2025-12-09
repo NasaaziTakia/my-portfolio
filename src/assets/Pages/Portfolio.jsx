@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import '../CSS/Portfolio.css';
-import Navigation from '../Components/Navigation';  
+import Navigation from '../Components/Navigation'; 
+import mayondo from '../Images/mayondo.png';
+import hospitalImage from '../Images/hospital.png';
 
 
 function Portfolio() {
@@ -26,12 +28,19 @@ function Portfolio() {
       {/* Flagship Project */}
       <section className="flagship-section">
         <h2 className="section-title">Flagship Project</h2>
-        <div className="project-card other-card">
-          <div className="project-image-placeholder">Project Image</div>
+        {/* CHANGED: Use 'flagship-card' class for unique styling */}
+        <div className="project-card flagship-card">
+          <div className="project-image-placeholder">
+             <img 
+                        src={hospitalImage}
+                        alt="Hospital Management System"
+                      />
+          </div>
           <div className="project-content">
             <h3 className="project-title">{projects[0].title}</h3>
             <p className="project-description">{projects[0].description}</p>
-            <Link to={'/portfolio/projectDetails'}>
+            {/* IMPROVED: Dynamic link based on project id */}
+            <Link to={`/portfolio/ProjectDetails`}>
               <button className="btn-details">Project Details</button>
             </Link>
           </div>
@@ -41,12 +50,18 @@ function Portfolio() {
       {/* Other Project */}
       <section className="other-projects-section">
         <h2 className="section-title">Other Project</h2>
-        <div className="project-card other-card">
-          <div className="project-image-placeholder">Project Image</div>
+          <div className="project-card other-card">
+          <div className="project-image-placeholder">
+                         <img 
+                        src={mayondo}
+                        alt="Stock and Sales Management System"
+                      />
+          </div>
           <div className="project-content">
             <h3 className="project-title">{projects[1].title}</h3>
             <p className="project-description">{projects[1].description}</p>
-            <Link to={'/portfolio/projectDetails'}>
+            {/* IMPROVED: Dynamic link based on project id */}
+            <Link to={`/portfolio/OtherProjectDetail`}>
               <button className="btn-details">Project Details</button>
             </Link>
           </div>
