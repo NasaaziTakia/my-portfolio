@@ -79,8 +79,6 @@ function ProjectDetail() {
         <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer" className="btn-view-designs">
           View Designs on Figma
         </a>
-      </div>
-
       <div className="project-section">
         <h2>Project Purpose</h2>
         <p>{project.purpose}</p>
@@ -90,7 +88,7 @@ function ProjectDetail() {
         <h2>Problem Solved</h2>
         <p>{project.problemSolved}</p>
       </div>
-
+      </div>
       <div className="design-process">
         <h2>Design Process</h2>
         <p className="process-subtitle">My end-to-end journey, from insight to impact</p>

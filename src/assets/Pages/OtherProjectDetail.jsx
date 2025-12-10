@@ -7,11 +7,19 @@ import empathymap from '../Images/empathymap.png';
 import userflow from '../Images/userflow.png';
 import wireframes from '../Images/wireframe.jpeg';
 import lowfidelity from '../Images/low-fi.png';
+import component1 from '../Images/component1.png';
+import layout from '../Images/layout.png';
+import topography from '../Images/topography.png';
+import color from '../Images/color.png';
+import highfidelity from '../Images/high-fi.png';
+import cissyln from '../Images/cissyln.png';
+import allan from '../Images/allan.png';
 
 const OtherProjectDetail = () => {
   return (
     <div className="project-detail-container">
       <Navigation />
+      
       {/* Header */}
       <header className="project-header">
         <h1 className="project-title">Mayondo Stock and Sales Management</h1>
@@ -41,6 +49,18 @@ const OtherProjectDetail = () => {
           </ul>
         </div>
       </section>
+
+      {/* Figma Link Button - MOVED HERE */}
+      <div className="figma-link-container">
+        <a 
+          href="https://www.figma.com/design/Q6RkllXdw8wbqodNdGXlZa/Nasaazi-Takia?node-id=597-43&p=f&t=c620Vs8oM767uPjf-0" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="btn-view-designs"
+        >
+          View Designs on Figma
+        </a>
+      </div>
 
       {/* Key Features */}
       <section className="section">
@@ -171,7 +191,6 @@ const OtherProjectDetail = () => {
           <div className="persona-card">
             <img src={userpersona} alt="User Persona Illustration" />
           </div>
-        
         </div>
       </section>
 
@@ -180,26 +199,27 @@ const OtherProjectDetail = () => {
         <h2 className="section-title">Empathy Map</h2>
         <div className="section-content">
           <div className="empathy-map">
-             <img src={empathymap} alt="Empathy Map Illustration" />
-           </div>
+            <img src={empathymap} alt="Empathy Map Illustration" />
+          </div>
         </div>
       </section>
 
       {/* User Flow */}
-<section className="section">
-  <h2 className="section-title">User Flow</h2>
-  <div className="section-content user-flow-content"> {/* Add the new class here */}
-    <img src={userflow} alt="User Flow Illustration" />
-  </div>
-</section>
+      <section className="section">
+        <h2 className="section-title">User Flow</h2>
+        <div className="section-content user-flow-content">
+          <img src={userflow} alt="User Flow Illustration" />
+        </div>
+      </section>
 
       {/* Wireframes */}
       <section className="section">
         <h2 className="section-title">Wireframes</h2>
         <div className="section-content">
-         <img src={wireframes} alt="Wireframes Illustration" />
+          <img src={wireframes} alt="Wireframes Illustration" />
         </div>
       </section>
+
       {/* Low Fidelity Prototypes */}
       <section className="section">
         <h2 className="section-title">Low Fidelity Designs</h2>
@@ -211,106 +231,39 @@ const OtherProjectDetail = () => {
       {/* Design System */}
       <section className="section">
         <h2 className="section-title">Design System</h2>
+        <div className="section-content design-system-grid">
+          <div className="design-system-column">
+            <h3>Components</h3>
+            <img src={component1} alt="Design System Components" />
+          </div>
+          <div className="design-system-column">
+            <h3>Layouts</h3>
+            <img src={layout} alt="Design System Layouts" />
+          </div>
+          <div className="design-system-topography">
+            <h3>Typography</h3>
+            <img src={topography} alt="Design System Typography" />
+          </div>
+          <div className="design-system-color">
+            <h3>Color Palette</h3>
+            <img src={color} alt="Design System Color Palette" />
+          </div>  
+        </div>
+      </section>
+
+      {/* Usability Testing */}
+      <section className="section">
+        <h2 className="section-title">Usability Testing</h2>
         <div className="section-content">
-          <div className="design-system">
-            <div className="color-palette">
-              <h3>Colors</h3>
-              
-              <div className="color-swatch">
-                <div className="color-sample" style={{ backgroundColor: '#3e921f' }}></div>
-                <div className="color-info">
-                  <p>Green Normal</p>
-                  <p>#3e921f</p>
-                  <p>rgb(62, 146, 31)</p>
-                </div>
-              </div>
-              
-              <div className="color-swatch">
-                <div className="color-sample" style={{ backgroundColor: '#38831c' }}></div>
-                <div className="color-info">
-                  <p>Green Normal:hover</p>
-                  <p>#38831c</p>
-                  <p>rgb(56, 131, 28)</p>
-                </div>
-              </div>
-              
-              <div className="color-swatch">
-                <div className="color-sample" style={{ backgroundColor: '#2f6e17' }}></div>
-                <div className="color-info">
-                  <p>Green Dark</p>
-                  <p>#2f6e17</p>
-                  <p>rgb(47, 110, 23)</p>
-                </div>
-              </div>
-              
-              <div className="color-swatch">
-                <div className="color-sample" style={{ backgroundColor: '#f19f24' }}></div>
-                <div className="color-info">
-                  <p>Orange Normal</p>
-                  <p>#f19f24</p>
-                  <p>rgb(241, 159, 36)</p>
-                </div>
-              </div>
-              
-              <div className="color-swatch">
-                <div className="color-sample" style={{ backgroundColor: '#d06902' }}></div>
-                <div className="color-info">
-                  <p>Orange Normal</p>
-                  <p>#d06902</p>
-                  <p>rgb(208, 105, 2)</p>
-                </div>
-              </div>
-              
-              <div className="color-swatch">
-                <div className="color-sample" style={{ backgroundColor: '#9c4f02' }}></div>
-                <div className="color-info">
-                  <p>Orange Dark</p>
-                  <p>#9c4f02</p>
-                  <p>rgb(156, 79, 2)</p>
-                </div>
-              </div>
-              
-              <div className="color-swatch">
-                <div className="color-sample" style={{ backgroundColor: '#cf2626' }}></div>
-                <div className="color-info">
-                  <p>Red Normal</p>
-                  <p>#cf2626</p>
-                  <p>rgb(207, 38, 38)</p>
-                </div>
-              </div>
-              
-              <div className="color-swatch">
-                <div className="color-sample" style={{ backgroundColor: '#000000' }}></div>
-                <div className="color-info">
-                  <p>Black Normal</p>
-                  <p>#000000</p>
-                  <p>rgb(0, 0, 0)</p>
-                </div>
-              </div>
+          <p>I conducted usability tests with four participants to assess how easily they could navigate the app and complete key tasks. Their feedback revealed areas that needed clearer navigation, simpler workflows, and better labeling. I refined the designs based on their responses and tested again to ensure the improvements aligned with what users expected and needed.</p>
+          
+          <div className="testimonial-container">
+            <div className="testimonial-cissyln">
+              <img src={allan} alt="Allan's Testimonial" />
             </div>
             
-            <div className="typography">
-              <h3>Typography</h3>
-              
-              <div className="typography-sample">
-                <h1>Mayondo Furniture Workshop</h1>
-                <p>Heading 1</p>
-              </div>
-              
-              <div className="typography-sample">
-                <h2>Mayondo Furniture Workshop</h2>
-                <p>Heading 2</p>
-              </div>
-              
-              <div className="typography-sample">
-                <h3>Mayondo Furniture Workshop</h3>
-                <p>Heading 3</p>
-              </div>
-              
-              <div className="typography-sample">
-                <p>Mayondo Furniture Workshop</p>
-                <p>Paragraph</p>
-              </div>
+            <div className="testimonial-allan">
+              <img src={cissyln} alt="Cissyln's Testimonial" />
             </div>
           </div>
         </div>
@@ -320,47 +273,7 @@ const OtherProjectDetail = () => {
       <section className="section">
         <h2 className="section-title">High Fidelity Designs</h2>
         <div className="section-content">
-          <div className="design-showcase">
-            <div className="design-image">
-              <img src="https://via.placeholder.com/400x300?text=Home+Screen" alt="Home Screen" />
-            </div>
-            <div className="design-image">
-              <img src="https://via.placeholder.com/400x300?text=Sales+Screen" alt="Sales Screen" />
-            </div>
-            <div className="design-image">
-              <img src="https://via.placeholder.com/400x300?text=Stock+Management" alt="Stock Management" />
-            </div>
-            <div className="design-image">
-              <img src="https://via.placeholder.com/400x300?text=Reports+Screen" alt="Reports Screen" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Usability Testing */}
-      <section className="section">
-        <h2 className="section-title">Usability Testing</h2>
-        <div className="section-content">
-          <p>I conducted usability tests with four participants to assess how easily they could navigate the app and complete key tasks. Their feedback revealed areas that needed clearer navigation, simpler workflows, and better labeling.</p>
-          
-          <div className="testing-insights">
-            <div className="insight-card">
-              <p className="insight-text">"The report section should not be editable. I expected reports to be read-only and felt that having edit options could lead to mistakes or unauthorized changes."</p>
-              <p className="insight-source">- Cissyln</p>
-            </div>
-            
-            <div className="insight-card">
-              <p className="insight-text">"Users should be able to download reports directly from the app. This would make it easier for managers to keep records and share updates."</p>
-              <p className="insight-source">- Musimenta</p>
-            </div>
-            
-            <div className="insight-card">
-              <p className="insight-text">"The registration process should be on one screen instead of two separate screens. The split made the process longer."</p>
-              <p className="insight-source">- Lutalo Allan</p>
-            </div>
-          </div>
-          
-          <p>I refined the designs based on their responses and tested again to ensure the improvements aligned with what users expected and needed.</p>
+          <img src={highfidelity} alt="High Fidelity Designs Illustration" />
         </div>
       </section>
     </div>

@@ -25,9 +25,29 @@ function Portfolio() {
   return (
     <div className="portfolio-page">
       <Navigation />
+            {/* Other Project */}
+      <section className="other-projects-section">
+        <h2 className="section-title">Flagship Project</h2>
+          <div className="project-card other-card">
+          <div className="project-image-placeholder">
+                         <img 
+                        src={mayondo}
+                        alt="Stock and Sales Management System"
+                      />
+          </div>
+          <div className="project-content">
+            <h3 className="project-title">{projects[1].title}</h3>
+            <p className="project-description">{projects[1].description}</p>
+            {/* IMPROVED: Dynamic link based on project id */}
+            <Link to={`/portfolio/OtherProjectDetail`}>
+              <button className="btn-details">Project Details</button>
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* Flagship Project */}
       <section className="flagship-section">
-        <h2 className="section-title">Flagship Project</h2>
+        <h2 className="section-title">Other Project</h2>
         {/* CHANGED: Use 'flagship-card' class for unique styling */}
         <div className="project-card flagship-card">
           <div className="project-image-placeholder">
@@ -47,26 +67,7 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* Other Project */}
-      <section className="other-projects-section">
-        <h2 className="section-title">Other Project</h2>
-          <div className="project-card other-card">
-          <div className="project-image-placeholder">
-                         <img 
-                        src={mayondo}
-                        alt="Stock and Sales Management System"
-                      />
-          </div>
-          <div className="project-content">
-            <h3 className="project-title">{projects[1].title}</h3>
-            <p className="project-description">{projects[1].description}</p>
-            {/* IMPROVED: Dynamic link based on project id */}
-            <Link to={`/portfolio/OtherProjectDetail`}>
-              <button className="btn-details">Project Details</button>
-            </Link>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }
